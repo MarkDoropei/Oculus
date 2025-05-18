@@ -199,12 +199,9 @@ html{
   color:#070707;
 }
 
-.tabs__content-item--active{
-  opacity: 1;
-}
-
 .tabs__content{
   position:relative;
+  min-height: 300px;
 }
 
 .tabs__content-item{
@@ -214,6 +211,11 @@ html{
   gap:40px;
   opacity: 0;
   position: absolute;
+  transition: opacity .3s ease;
+}
+
+.tabs__content-item--active { 
+  opacity: 1 !important ;
 }
 
 .tabs__content-box h3{
