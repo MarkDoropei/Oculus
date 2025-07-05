@@ -369,7 +369,7 @@ html{
   animation: line-text 6s linear 1s infinite;
 }
 
-@keyframes line-text {  /* вопрос */
+@keyframes line-text {  
   from{
     transform:translateX(115%);
     transform-origin: left center;
@@ -509,6 +509,88 @@ html{
   -webkit-text-fill-color: transparent;
 }
 
+.reviews{
+  margin-bottom:75px;
+}
+
+.reviews__box{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap:20px
+}
+
+.review__card{
+  border:1px solid #5C5C5E;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review__card:hover{
+  border:1px solid;
+  border-image:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%) 1;
+  transition: border-radius 0.5s linear;
+  box-shadow: #5a5a5a5a 1px 1px 0.5px 0.5px;
+}
+
+.review__card-img{
+  max-width: 100%;
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+}
+
+@keyframes color-change {
+  0% 
+  { 
+    background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  25% {
+    background:linear-gradient(-180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  50% 
+  { 
+    background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  75% 
+  { 
+    background:linear-gradient(-180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  }
+  100% 
+  { 
+    background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+}
+
+.review__stars {
+  animation: color-change 5s infinite; 
+}
+
+.review__card-name{
+  font-size: 28px;
+  font-weight: 700;
+  color: #070707;
+}
+
+.review__card-name{
+  font-size: 28px;
+  font-weight: 700;
+  background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .contacts{
   margin-bottom: 100px;
 }
@@ -532,10 +614,6 @@ html{
 
 .contacts__text{
   font-size: 13px;
-}
-
-.contacts__email{
-
 }
 
 .form{
@@ -660,6 +738,11 @@ html{
   }
   .subtitle{
     font-size: 24px;
+  }
+  .reviews__box{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:20px
   }
 }
 
