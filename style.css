@@ -530,7 +530,6 @@ html{
 .review__card:hover{
   border:1px solid;
   border-image:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%) 1;
-  transition: border-radius 0.5s linear;
   box-shadow: #5a5a5a5a 1px 1px 0.5px 0.5px;
 }
 
@@ -580,15 +579,87 @@ html{
 .review__card-name{
   font-size: 28px;
   font-weight: 700;
-  color: #070707;
-}
-
-.review__card-name{
-  font-size: 28px;
-  font-weight: 700;
   background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+
+.news{
+  margin-bottom: 20px;
+}
+
+.news__inf{
+  margin-bottom: 10px;
+  font-size: 48px;
+  background:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-align: center;
+}
+
+.news__box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap:20px;
+}
+
+.news__card{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border:1px solid;
+  border-image:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%) 1;
+}
+
+.news__name{
+  padding:20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 26px;
+  max-height: 50px;
+  font-size: 24px;
+  background:linear-gradient(-180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+
+}
+
+.news__text{
+  padding:10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+}
+
+.news__btn{
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-height: 50px;
+  background-color: #F6F4F5;
+  color:#5C5C5E
+}
+
+.news__btn:hover{
+  border:1px solid;
+  border-image:linear-gradient(180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%) 1;
+  background:linear-gradient(-180deg, #BC10D8 0% , rgba(80, 0, 250, 0.93)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+.news__card:hover{
+  box-shadow: #5a5a5a 1px 1px 0.5px 0.5px;
 }
 
 .contacts{
@@ -693,6 +764,12 @@ html{
     grid-template-columns: 1fr 1fr;
     gap:30px;
   }
+  .news__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:20px;
+  }
 }
 
 @media (max-width:820px){
@@ -743,6 +820,11 @@ html{
     display: grid;
     grid-template-columns: 1fr;
     gap:20px
+  }
+  .news__box{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap:20px;
   }
 }
 

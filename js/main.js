@@ -31,3 +31,9 @@ const menu = document.querySelector('.menu');
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle('menu--active');
 });
+
+
+$(".news__btn").click(function(){
+  alert("Subscribe and get more news every week!")
+})
+
